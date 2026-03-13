@@ -33,5 +33,34 @@
       "role": "Employee"
     }
   ],
-  "leaveInformation": []
+  "leaveInformation": [
+    {
+      "id": "c501",
+      "employeeEmail": "tesla@gmail.com",
+      "numberOfLeaves": "2",
+      "reasonForLeave": "Not feeling well",
+      "status": "approved"
+    },
+    {
+      "id": "f0d6",
+      "employeeEmail": "hall@gmail.com",
+      "numberOfLeaves": "3",
+      "reasonForLeave": "Annual leave",
+      "status": "rejected"
+    },
+    {
+      "id": "4126",
+      "employeeEmail": "hall@gmail.com",
+      "numberOfLeaves": "6",
+      "reasonForLeave": "Out of station",
+      "status": "approved"
+    },
+    {
+      "id": "c71f",
+      "employeeEmail": "tesla@gmail.com",
+      "numberOfLeaves": "4",
+      "reasonForLeave": "Break",
+      "status": "rejected"
+    }
+  ]
 }

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { Route,Routes } from 'react-router-dom'
 import Login from './components/Login'
@@ -8,9 +7,11 @@ import EmployeesDashBoard from './components/EmployeesDashBoard'
 import ProtectedRouter from './components/ProtectedRouter'  
 import ViewEmployees from './components/ViewEmployees'
 import ViewEmpProfile from './components/ViewEmpProfile'
+import ApplyLeave from './components/ApplyLeave'
+import ViewLeaves from './components/ViewLeaves'
+import LeaveStatus from './components/LeaveStatus'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
       </ProtectedRouter>
         }>
           <Route path = 'viewEmployees' element={<ViewEmployees/>}> </Route>
+          <Route path = 'viewLeaves' element={<ViewLeaves/>}> </Route>
         </Route>
       <Route path='/employee-dashboard' element={
         <ProtectedRouter>
@@ -32,6 +34,8 @@ function App() {
         </ProtectedRouter>
       }>
         <Route path = 'viewEmpProfile' element={<ViewEmpProfile/>}></Route>
+        <Route path = 'applyLeave' element ={<ApplyLeave/>}></Route>
+        <Route path = 'viewLeaveStatus' element ={<LeaveStatus/>}></Route>
       </Route>
      </Routes>
     </>

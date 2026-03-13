@@ -1,0 +1,37 @@
+{
+  "logins": [
+    {
+      "email": "hr@gmail.com",
+      "password": "hr123",
+      "role": "hr",
+      "id": "9722"
+    },
+    {
+      "id": "b281",
+      "email": "john@gmail.com",
+      "password": "john123",
+      "role": "Employee"
+    }
+  ],
+  "employees": [
+    {
+      "id": "89ee",
+      "firstName": "Tesla",
+      "lastName": "jake",
+      "age": "34",
+      "email": "tesla@gmail.com",
+      "password": "tesla123",
+      "role": "Employee"
+    },
+    {
+      "id": "f116",
+      "firstName": "Mark",
+      "lastName": "Hall",
+      "age": "56",
+      "email": "hall@gmail.com",
+      "password": "hall123",
+      "role": "Employee"
+    }
+  ],
+  "leaveInformation": []
+}

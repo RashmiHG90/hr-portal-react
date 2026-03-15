@@ -58,6 +58,15 @@
       "email": "raj@gmail.com",
       "password": "raj123",
       "role": "Employee"
+    },
+    {
+      "id": "a1c2",
+      "firstName": "Bunty",
+      "lastName": "Raj",
+      "age": "32",
+      "email": "bunty@gmail.com",
+      "password": "bunty123",
+      "role": "Employee"
     }
   ],
   "leaveInformation": [
@@ -102,6 +111,13 @@
       "numberOfLeaves": "2",
       "reasonForLeave": "Not feeling well",
       "status": "approved"
+    },
+    {
+      "id": "e251",
+      "employeeEmail": "bunty@gmail.com",
+      "numberOfLeaves": "5",
+      "reasonForLeave": "Festival celebration in hometown",
+      "status": "rejected"
     }
   ]
 }

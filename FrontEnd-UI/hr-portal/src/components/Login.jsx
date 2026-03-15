@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState,useContext } from "react"
 import { hrsignIn,employeesignIn } from "../service/loginService"
 import { useNavigate, Link } from "react-router-dom"
+import EmployeeContext from "./EmployeeContext"
 
 function Login(){
 
     let [email, setEmail] = useState("")
     let [password,setPassword]= useState("")
     let [role, setRole] = useState("")
+    let contextRef = useContext(EmployeeContext)
     let navigate=useNavigate();
 
     let handleSubmit= async (e)=>{
@@ -14,21 +16,28 @@ function Login(){
         if(role === "hr"){
              let result = await hrsignIn();
              let user = result.find((user)=> user.email === email && user.password === password && user.role === role);
+             console.log(user)
              if(user){
                 // alert("Login successful")
-                sessionStorage.setItem("user", user);
                 localStorage.setItem("employeeEmail", email)
                 navigate("/hr-dashboard")
              }
         }else if (role === "Employee"){
             let result = await employeesignIn();
-             let user = result.find((user)=> user.email === email && user.password === password && user.role === role);
+             let user = result.find((user)=> user.email === email && user.role === role);
              if(user){
+                contextRef.setEmployee(user);
+             }
+             if(user.password === "NA"){
+                alert("First time login, please fill in more details")
+                localStorage.setItem("employeeEmail", email)
+                navigate("/signUp")                
+             }else if(user.password === password){
                 // alert("Login successful")
-                sessionStorage.setItem("user", user);
+                //sessionStorage.setItem("user", user);
                 localStorage.setItem("employeeEmail", email)
                 navigate("/employee-dashboard")                
-             }            
+             }           
         }else{
         alert("Invalid credential")
        }

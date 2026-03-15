@@ -9,7 +9,6 @@ function EmployeesDashBoard(){
         <>
         <input type="button" value="Logout"
         onClick={()=>{
-            sessionStorage.removeItem("user")
             localStorage.removeItem("employeeEmail")
             navigate("/")
         }} />

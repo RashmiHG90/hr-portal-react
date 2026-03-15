@@ -31,6 +31,24 @@
       "email": "hall@gmail.com",
       "password": "hall123",
       "role": "Employee"
+    },
+    {
+      "id": "32f4",
+      "firstName": "jacob",
+      "lastName": "test",
+      "age": "25",
+      "email": "jacob@gmail.com",
+      "password": "jacob123",
+      "role": "Employee"
+    },
+    {
+      "id": "9ce2",
+      "firstName": "Marcus",
+      "lastName": "lord",
+      "age": "35",
+      "email": "marcus@gmail.com",
+      "password": "marcus123",
+      "role": "Employee"
     }
   ],
   "leaveInformation": [

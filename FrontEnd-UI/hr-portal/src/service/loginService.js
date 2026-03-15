@@ -4,7 +4,7 @@ let URL = "http://localhost:3000/logins"
 let empURL = "http://localhost:3000/employees"
 
 export let isAuthenticated =()=>{
-    return sessionStorage.getItem("user") !== null
+    return localStorage.getItem("employeeEmail") !== null
 }
 
 export const hrsignIn = async()=>{
@@ -35,6 +35,16 @@ export const signUp = async(newUser)=>{
     //url and data(user)
     try{
         const result = await axios.post(empURL, newUser)
+        console.log(result.data);
+        return result.data;
+    }catch(error){
+        console.log(error.message)
+    }
+}
+
+export const updateEmployee = async(empId,empDetails)=>{
+    try{
+        const result = await axios.put(empURL+"/"+empId, empDetails)
         console.log(result.data);
         return result.data;
     }catch(error){

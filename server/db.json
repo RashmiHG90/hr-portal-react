@@ -49,6 +49,15 @@
       "email": "marcus@gmail.com",
       "password": "marcus123",
       "role": "Employee"
+    },
+    {
+      "id": "ac25",
+      "firstName": "Rajesh",
+      "lastName": "pillia",
+      "age": "38",
+      "email": "raj@gmail.com",
+      "password": "raj123",
+      "role": "Employee"
     }
   ],
   "leaveInformation": [
@@ -79,6 +88,20 @@
       "numberOfLeaves": "4",
       "reasonForLeave": "Break",
       "status": "rejected"
+    },
+    {
+      "id": "9fe3",
+      "employeeEmail": "raj@gmail.com",
+      "numberOfLeaves": "10",
+      "reasonForLeave": "Out of country for tour",
+      "status": "approved"
+    },
+    {
+      "id": "0b8f",
+      "employeeEmail": "hall@gmail.com",
+      "numberOfLeaves": "2",
+      "reasonForLeave": "Not feeling well",
+      "status": "approved"
     }
   ]
 }

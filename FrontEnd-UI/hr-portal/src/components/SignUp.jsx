@@ -75,29 +75,122 @@ function SignUp(){
     // }
     
     return(
-        <>
-        <h3>Sign Up Page</h3>
-        <form onSubmit={handleSubmit}>
-            <label>Firstname : </label>
-            <input type="text" name="firstName" 
-            value ={emp.firstName} onChange={handleInputData}/><br/>
-            <label>Lastname : </label>
-            <input type="text" name="lastName" 
-            value ={emp.lastName} onChange={handleInputData}/><br/>
-            <label>Age : </label>
-            <input type="number" name="age" 
-            value ={emp.age} onChange={handleInputData}/><br/>
-            <label>Email : </label>
-            <input type="email" name="email" placeholder="Enter email id"
-            value ={emp.email} onChange={handleInputData} /> <br />
-            <label>Password : </label>
-            <input type="password" name="password" placeholder="Enter password"
-            value = {emp.password} onChange={handleInputData} /> <br />
-          
-            <button type="submit">Sign Up</button>
-        </form>
-        <Link to='/'> Already have an account? Login </Link>
-        </>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-slate-100 p-4">
+            <div className="w-full max-w-md">
+                {/* Logo Section */}
+                <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl mb-4">
+                        <span className="text-2xl font-bold text-white">HR</span>
+                    </div>
+                    <h1 className="text-3xl font-bold text-slate-900 mb-2">Complete Profile</h1>
+                    <p className="text-slate-600">Fill in your details to get started</p>
+                </div>
+
+                {/* Form Card */}
+                <div className="card">
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                        {/* First Name */}
+                        <div className="form-group">
+                            <label htmlFor="firstName" className="form-label">First Name</label>
+                            <input 
+                                id="firstName"
+                                type="text" 
+                                name="firstName"
+                                className="form-input"
+                                placeholder="John"
+                                value={emp.firstName} 
+                                onChange={handleInputData}
+                                required
+                            />
+                        </div>
+
+                        {/* Last Name */}
+                        <div className="form-group">
+                            <label htmlFor="lastName" className="form-label">Last Name</label>
+                            <input 
+                                id="lastName"
+                                type="text" 
+                                name="lastName"
+                                className="form-input"
+                                placeholder="Doe"
+                                value={emp.lastName} 
+                                onChange={handleInputData}
+                                required
+                            />
+                        </div>
+
+                        {/* Age */}
+                        <div className="form-group">
+                            <label htmlFor="age" className="form-label">Age</label>
+                            <input 
+                                id="age"
+                                type="number" 
+                                name="age"
+                                className="form-input"
+                                placeholder="30"
+                                value={emp.age} 
+                                onChange={handleInputData}
+                                required
+                            />
+                        </div>
+
+                        {/* Email */}
+                        <div className="form-group">
+                            <label htmlFor="email" className="form-label">Email Address</label>
+                            <input 
+                                id="email"
+                                type="email" 
+                                name="email"
+                                className="form-input"
+                                placeholder="john@company.com"
+                                value={emp.email} 
+                                onChange={handleInputData}
+                                disabled
+                            />
+                            <p className="text-xs text-slate-500 mt-1">Cannot be changed</p>
+                        </div>
+
+                        {/* Password */}
+                        <div className="form-group">
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input 
+                                id="password"
+                                type="password" 
+                                name="password"
+                                className="form-input"
+                                placeholder="••••••••"
+                                value={emp.password} 
+                                onChange={handleInputData}
+                                required
+                            />
+                        </div>
+
+                        {/* Submit Button */}
+                        <button type="submit" className="btn-primary w-full mt-6">
+                            Complete Sign Up
+                        </button>
+                    </form>
+
+                    {/* Divider */}
+                    <div className="relative my-6">
+                        <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-slate-300"></div>
+                        </div>
+                        <div className="relative flex justify-center text-sm">
+                            <span className="px-2 bg-white text-slate-600">or</span>
+                        </div>
+                    </div>
+
+                    {/* Login Link */}
+                    <p className="text-center text-slate-600">
+                        Already have an account?{' '}
+                        <Link to="/" className="font-semibold text-primary-600 hover:text-primary-700">
+                            Log in
+                        </Link>
+                    </p>
+                </div>
+            </div>
+        </div>
     )
 }
 

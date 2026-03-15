@@ -44,22 +44,84 @@ function AddEmployee(){
 
     
     return(
-        <>
-        <h3>Add Employee</h3>
-        <form onSubmit={handleSubmit}>
-            <label>Firstname : </label>
-            <input type="text" name="firstName" 
-            value ={firstName} onChange={(e)=>setfirstName(e.target.value)}/><br/>
-            <label>Lastname : </label>
-            <input type="text" name="lastName" 
-            value ={lastName} onChange={(e)=>setlastName(e.target.value)}/><br/>
-            <label>Email : </label>
-            <input type="email" name="email" placeholder="Enter email id"
-            value ={email} onChange={(e)=> setEmail(e.target.value)} /> <br />      
-            <button type="submit">Add Employee</button>
-        </form>
-       
-        </>
+        <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-50 p-6">
+            <div className="max-w-3xl mx-auto">
+                {/* Header */}
+                <div className="mb-8">
+                    <h1 className="text-3xl font-bold text-slate-900 mb-2">Add New Employee</h1>
+                    <p className="text-slate-600">Create a new employee record in the system</p>
+                </div>
+
+                {/* Form Card */}
+                <div className="card">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                        {/* Two Column Layout */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* First Name */}
+                            <div className="form-group">
+                                <label htmlFor="firstName" className="form-label">First Name</label>
+                                <input 
+                                    id="firstName"
+                                    type="text" 
+                                    name="firstName"
+                                    className="form-input"
+                                    placeholder="John"
+                                    value={firstName} 
+                                    onChange={(e) => setfirstName(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            {/* Last Name */}
+                            <div className="form-group">
+                                <label htmlFor="lastName" className="form-label">Last Name</label>
+                                <input 
+                                    id="lastName"
+                                    type="text" 
+                                    name="lastName"
+                                    className="form-input"
+                                    placeholder="Doe"
+                                    value={lastName} 
+                                    onChange={(e) => setlastName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        {/* Email */}
+                        <div className="form-group">
+                            <label htmlFor="email" className="form-label">Email Address</label>
+                            <input 
+                                id="email"
+                                type="email" 
+                                name="email"
+                                className="form-input"
+                                placeholder="john.doe@company.com"
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+
+                        {/* Action Buttons */}
+                        <div className="card-footer">
+                            <button 
+                                type="reset"
+                                className="btn-secondary"
+                            >
+                                Clear
+                            </button>
+                            <button 
+                                type="submit"
+                                className="btn-primary"
+                            >
+                                Add Employee
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }
 
